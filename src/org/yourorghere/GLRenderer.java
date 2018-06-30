@@ -52,7 +52,7 @@ gl.glRotatef(180.0f,0.0f,0.0f,1.0f);
 gl.glRotatef(R_Z,0.0f,0.0f,1.0f);
 gl.glRotatef(R_X,1.0f,0.0f,0.0f);
 gl.glRotatef(R_Y,0.0f,1.0f,0.0f);
-Objek.Tabung(gl);
+Objek.kapal(gl);
 gl.glFlush();
 }
 public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
