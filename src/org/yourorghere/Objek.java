@@ -1,23 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.yourorghere;
-
-/**
- *
- * @author Giezel
- */
-import com.sun.opengl.util.GLUT;
 import javax.media.opengl.GL;
 import javax.media.opengl.glu.GLU;
 import javax.media.opengl.glu.GLUquadric;
-
 public class Objek {
-static float puter=0;
-    
-    static void Tabung(GL gl) {
+static void Tabung(GL gl) {
        gl.glRotatef(180,0,1,0);
        
        //badannyaaa
@@ -105,22 +91,4 @@ static float puter=0;
        gl.glEnd();
        gl.glPopMatrix();
     }
-    static void BigBox(GL gl) {
-        float amb[]
-                = {0, 0.5f, 0, 1};
-        float diff[] = {0, 0.5f, 0, 1};
-        float spec[] = {0, 0.5f, 0, 1};
-        float shine = 0;
-        gl.glMaterialfv(GL.GL_FRONT, GL.GL_AMBIENT, amb, 0);
-        gl.glMaterialfv(GL.GL_FRONT, GL.GL_DIFFUSE, diff, 0);
-        gl.glMaterialfv(GL.GL_FRONT, GL.GL_SPECULAR, spec, 0);
-        gl.glMaterialf(GL.GL_FRONT_AND_BACK, GL.GL_SHININESS, shine);
-        gl.glBegin(GL.GL_QUADS);
-        gl.glVertex3f(-10000, 0, -10000);
-        gl.glVertex3f(10000, 0, -10000);
-        gl.glVertex3f(10000, 0, 10000);
-        gl.glVertex3f(-10000, 0, 10000);
-        gl.glEnd();
-    }
-    
 }
