@@ -90,5 +90,21 @@ static void Tabung(GL gl) {
        gl.glVertex3f(0, 1, 1);
        gl.glEnd();
        gl.glPopMatrix();
+       
+       //silinder atas 1
+       gl.glTranslatef(0.4999f, 1f, 0.9f);
+       gl.glPushMatrix();
+       float BODY_LENGTH2=1.1f;
+       float BODY_RADIUS2=0.5f;
+       
+      //set material(gl)
+      int SLICES2=60;
+      int STACKS2=60;
+      gl.glRotatef(90,1,0,0);
+      glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES2, STACKS2);
+      glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES2, STACKS2);
+      gl.glTranslatef(0f, 0f, BODY_RADIUS2);
+      glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES2, STACKS2);
+      gl.glPopMatrix();
     }
 }
