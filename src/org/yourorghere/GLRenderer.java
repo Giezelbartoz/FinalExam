@@ -62,6 +62,30 @@ public void setBasicRotation(float z,float x)
 R_Z=z;
 R_X=x;
 }
+private static boolean kananO,majuO,kiriO,atasO,bawahO;
+void Key_Pressed(int keyCode){
+    if(keyCode == 32){
+        if(majuO){
+            majuO=false;
+        }else{
+            majuO=true;
+        }
+    } else if(keyCode==39){
+    if(kananO){
+        kananO=false;
+    }else{
+        kiriO=false;
+        kananO=true;
+    }
+} else if(keyCode==37){
+        if(kiriO){
+        kiriO=false;
+        }else{
+        kananO=false;
+        kiriO=true;
+        }
+        }
+}
 public void R_Tambah_Z(boolean on){ R_Z=R_Z+30.0f;}
 public void R_Tambah_X(boolean on){ R_X=R_X+30.0f;}
 public void R_Tambah_Y(boolean on){ R_Y=R_Y+30.0f;}
