@@ -68,4 +68,8 @@ public void R_Tambah_Y(boolean on){ R_Y=R_Y+30.0f;}
 public void T_Tambah_Z(boolean on){ T_Z=T_Z+ 1.0f;}
 public void T_Tambah_X(boolean on){ T_X=T_X+ 1.0f;}
 public void T_Tambah_Y(boolean on){ T_Y=T_Y+ 1.0f;}
+
+    void Key_Pressed(int keyCode) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
