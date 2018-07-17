@@ -1,22 +1,22 @@
 package org.yourorghere;
 
-<<<<<<< HEAD
-=======
+import com.sun.opengl.util.GLUT;
 import com.sun.opengl.util.texture.Texture;
->>>>>>> 3e493112eac9275c278c3190ea52b30ce5fa17a4
+import com.sun.opengl.util.texture.TextureIO;
+import java.io.File;
+import java.io.IOException;
 import javax.media.opengl.GL;
 import javax.media.opengl.glu.GLU;
 import javax.media.opengl.glu.GLUquadric;
 
 public class Objek {
 
-<<<<<<< HEAD
-    static void Tabung(GL gl) {
-=======
+
+    
+
     static float putar = 0;
 
     static void kapal(GL gl) {
->>>>>>> 3e493112eac9275c278c3190ea52b30ce5fa17a4
         gl.glRotatef(180, 0, 1, 0);
 
         //badannyaaa
@@ -102,22 +102,18 @@ public class Objek {
         gl.glVertex3f(0, 1, 1);
         gl.glEnd();
         gl.glPopMatrix();
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 3e493112eac9275c278c3190ea52b30ce5fa17a4
         //silinder atas 1
         gl.glTranslatef(0.4999f, 1f, 0.9f);
         gl.glPushMatrix();
         float BODY_LENGTH2 = 1.1f;
         float BODY_RADIUS2 = 0.5f;
-<<<<<<< HEAD
+
         //Set_Material(gl);
-=======
+
 
         //set material(gl)
->>>>>>> 3e493112eac9275c278c3190ea52b30ce5fa17a4
+
         int SLICES2 = 60;
         int STACKS2 = 60;
         gl.glRotatef(90, 1, 0, 0);
@@ -126,7 +122,7 @@ public class Objek {
         gl.glTranslatef(0f, 0f, BODY_RADIUS2);
         glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES2, STACKS2);
         gl.glPopMatrix();
-<<<<<<< HEAD
+
 //
         //silinder atas 2
         gl.glTranslatef(0f, 0f, -0.8f);
@@ -184,7 +180,40 @@ public class Objek {
         gl.glVertex3f(1f, 0.1f, 1f);
         gl.glEnd();
         gl.glPopMatrix();
-=======
+
+    }
+    static void Tabung(GL gl) {
+        float amb[] = {0.34f, 0.34f, 0.34f, 1};
+        float diff[] = {0.41f, 0.41f, 0.41f, 1};
+        float spec[] = {0.11f, 0.11f, 0.11f, 1};
+        float shine = 200;
+
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_AMBIENT, amb, 0);
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_DIFFUSE, diff, 0);
+        gl.glMaterialfv(GL.GL_FRONT_AND_BACK, GL.GL_SPECULAR, spec, 0);
+        gl.glMaterialf(GL.GL_FRONT_AND_BACK, GL.GL_SHININESS, shine);
+
+        float BODY_LENGTH = 5f;
+        float BODY_RADIUS = 2.0f;
+        int SLICES = 30;
+        int STACKS = 30;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        glu.gluCylinder(q, BODY_RADIUS, BODY_RADIUS, BODY_LENGTH, SLICES, STACKS);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glTranslatef(0.0f, 0.0f, BODY_LENGTH);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+    }
+     static void Bola(GL gl) {
+
+        float BODY_RADIUS = 2.0f;
+        int SLICES = 30;
+        int STACKS = 30;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        glu.gluSphere(q, BODY_RADIUS, SLICES, STACKS);
     }
     public static Texture texture;
     static void Bigbox(GL gl) {
@@ -204,7 +233,7 @@ public class Objek {
         gl.glVertex3f(10000, 0, 10000);
         gl.glVertex3f(-10000, 0, -10000);
         gl.glEnd();
->>>>>>> 3e493112eac9275c278c3190ea52b30ce5fa17a4
+
     }
 
 }
